@@ -16,4 +16,4 @@ The download ZIP contains the nine Roman weights and variable fonts. Contact lin
 
 ## Edit
 
-Edit `index.html` for layout, text and contact details. `license.html` displays the supplied licence; retain `LICENSE.txt` with distributed fonts. Keep font URLs relative. The complete font project regenerates this folder with `.venv/bin/python scripts/website.py` after rebuilding the fonts.
+Edit `index.html` for layout, text and contact details. `license.html` displays the supplied licence; retain `LICENSE.txt` with distributed fonts. Keep font URLs relative. The complete font project refreshes the font assets and download ZIP with `.venv/bin/python scripts/website.py` after rebuilding the fonts. The HTML pages remain authoritative and are preserved by that command.

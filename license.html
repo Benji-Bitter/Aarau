@@ -55,7 +55,7 @@ nav.topnav a:hover{color:var(--ink)}
 nav.topnav a:hover::after{transform:scaleX(1);transform-origin:left}
 .theme-toggle{
   appearance:none;border:1px solid var(--rule);background:transparent;border-radius:999px;
-  height:34px;padding:0 12px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  min-height:44px;min-width:44px;padding:0 12px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
   font-size:12px;line-height:1;transition:border-color .2s ease,background .2s ease,transform .2s ease;
 }
 .theme-toggle:hover{background:var(--surface);border-color:var(--ink);transform:translateY(-1px)}
@@ -113,16 +113,16 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border
 .skip:focus{top:10px}
 
 /* motion */
-.hero .eyebrow,.hero h1,.hero-bottom{opacity:0;filter:blur(7px);transform:translateY(18px)}
+
 body.ready .hero .eyebrow{animation:enter .72s cubic-bezier(.18,.74,.18,1) .03s forwards}
 body.ready .hero h1{animation:enter .92s cubic-bezier(.18,.74,.18,1) .12s forwards}
 body.ready .hero-bottom{animation:enter .84s cubic-bezier(.18,.74,.18,1) .25s forwards}
-.reveal{opacity:0;filter:blur(7px);transform:translateY(24px);transition:opacity .78s cubic-bezier(.18,.74,.18,1),transform .78s cubic-bezier(.18,.74,.18,1),filter .78s ease}
+.reveal{transition:opacity .78s cubic-bezier(.18,.74,.18,1),transform .78s cubic-bezier(.18,.74,.18,1),filter .78s ease}
 .reveal.is-visible{opacity:1;filter:blur(0);transform:none}
 .prose h2{scroll-margin-top:30px}
 .prose h2::after{content:"";display:block;width:0;height:1px;background:var(--ink);margin-top:17px;transition:width .7s cubic-bezier(.18,.74,.18,1)}
 .prose h2.is-visible::after{width:100%}
-@keyframes enter{to{opacity:1;filter:blur(0);transform:none}}
+@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;filter:blur(0);transform:none}}
 
 @media(max-width:900px){
   .layout{grid-template-columns:210px minmax(0,1fr);gap:45px}
@@ -140,7 +140,9 @@ body.ready .hero-bottom{animation:enter .84s cubic-bezier(.18,.74,.18,1) .25s fo
   .wrap{padding:0 6vw}
   .header-actions{gap:12px}
   nav.topnav{gap:16px}
-  nav.topnav a:nth-child(2){display:none}
+  header{flex-wrap:wrap;gap:12px}
+  .header-actions{width:100%;justify-content:space-between}
+  nav.topnav a{display:inline-flex;align-items:center;min-height:44px}
   .theme-toggle{padding:0 10px}
   .theme-label{display:none}
   .hero{padding:40px 0 46px}
@@ -166,6 +168,11 @@ body.ready .hero-bottom{animation:enter .84s cubic-bezier(.18,.74,.18,1) .25s fo
   h1{font-size:52px}
   .license-meta{display:none}
   .prose h2{break-after:avoid}
+}
+/* Keep content readable when printing or scripting is unavailable. */
+@media print{
+  .hero .eyebrow,.hero h1,.hero .intro,.hero-bottom,.reveal,.story-chapter *{opacity:1!important;filter:none!important;transform:none!important;animation:none!important}
+  .progress,.theme-toggle{display:none}
 }
 </style>
 <script>
@@ -247,7 +254,7 @@ body.ready .hero-bottom{animation:enter .84s cubic-bezier(.18,.74,.18,1) .25s fo
       </div>
 
       <p>Copyright (c) 2026 Benjamin Miles.</p>
-      <p>This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: https://openfontlicense.org</p>
+      <p>This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: <a href="https://openfontlicense.org">openfontlicense.org</a></p>
       <p>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</p>
 
       <h2 id="section-1" class="heading-reveal">PREAMBLE</h2>
@@ -319,7 +326,7 @@ if(!reduced&&'IntersectionObserver' in window){
         observer.unobserve(entry.target);
       }
     });
-  },{threshold:.1,rootMargin:'0px 0px -45px'});
+  },{threshold:0,rootMargin:'0px 0px -45px'});
   revealTargets.forEach(el=>observer.observe(el));
 }else{
   revealTargets.forEach(el=>el.classList.add('is-visible'));
