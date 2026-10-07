@@ -1,161 +1,366 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Aarau. An original neo-grotesk typeface by Benjamin Miles. Nine weights, one variable font. Download the development release.">
+<meta name="theme-color" content="#f2f0e9">
 <title>Aarau — Clear by design</title>
 <style>
 @font-face{font-family:Aarau;src:url('assets/Aarau-Variable.woff2?v=c44777a71e85') format('woff2');font-weight:100 900;font-display:swap}
-:root{--paper:#f2f0e9;--ink:#222522;--muted:#62685f;--rule:#c0c4b9;--accent:#355746}
+:root{
+  --paper:#f2f0e9;
+  --ink:#222522;
+  --muted:#62685f;
+  --rule:#c0c4b9;
+  --rule-soft:rgba(34,37,34,.12);
+  --surface:rgba(34,37,34,.045);
+  --accent:#355746;
+  --accent-contrast:#f2f0e9;
+  --shadow:0 18px 60px rgba(34,37,34,.08);
+}
+html[data-theme="dark"]{
+  --paper:#161816;
+  --ink:#f0eee7;
+  --muted:#a4a99f;
+  --rule:#454a43;
+  --rule-soft:rgba(240,238,231,.12);
+  --surface:rgba(240,238,231,.045);
+  --accent:#9fb9a8;
+  --accent-contrast:#161816;
+  --shadow:0 18px 60px rgba(0,0,0,.26);
+}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Aarau,Arial,sans-serif;font-size:17px;line-height:1.5;font-synthesis:none;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Aarau,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.5;
+  font-synthesis:none;
+  -webkit-font-smoothing:antialiased;
+  transition:background-color .38s ease,color .38s ease;
+}
 ::selection{background:var(--ink);color:var(--paper)}
 a{color:inherit;text-underline-offset:5px}
 button,input,textarea{font:inherit}
-a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+button{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.progress{position:fixed;inset:0 auto auto 0;height:2px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--ink);z-index:100;pointer-events:none;transition:background-color .38s ease}
 .wrap{max-width:1500px;margin:auto;padding:0 5vw}
-header,footer{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:25px 0;border-bottom:1px solid var(--rule)}
+header,footer{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:25px 0;border-bottom:1px solid var(--rule);transition:border-color .38s ease}
+.header-actions{display:flex;align-items:center;gap:24px}
 .logo{font-weight:600;font-size:26px;letter-spacing:-.04em;text-decoration:none;transition:opacity .2s ease}
 .logo:hover{opacity:.68}
 nav{display:flex;gap:26px;font-size:13px}
-nav a{text-decoration-color:transparent;transition:text-decoration-color .2s ease,opacity .2s ease}
-nav a:hover{text-decoration-color:currentColor}
-.hero{padding:55px 0 60px}
+nav a{position:relative;text-decoration:none;color:var(--muted);transition:color .2s ease}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+nav a:hover{color:var(--ink)}
+nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.theme-toggle{
+  appearance:none;border:1px solid var(--rule);background:transparent;border-radius:999px;
+  height:34px;padding:0 12px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  font-size:12px;line-height:1;transition:border-color .2s ease,background .2s ease,transform .2s ease;
+}
+.theme-toggle:hover{background:var(--surface);border-color:var(--ink);transform:translateY(-1px)}
+.theme-dot{width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--surface);transition:background .38s ease,box-shadow .38s ease}
+.hero{padding:55px 0 70px;overflow:hidden}
 .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
-h1{font-size:clamp(100px,23vw,340px);font-weight:600;line-height:1;letter-spacing:-.06em;margin:40px 0 45px}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:25px}
+.hero h1{
+  --hero-shift:0px;
+  font-size:clamp(100px,23vw,340px);
+  font-weight:600;
+  line-height:.95;
+  letter-spacing:-.064em;
+  margin:42px 0 48px;
+  transform:translate3d(0,var(--hero-shift),0);
+  will-change:transform,font-weight;
+}
 .intro{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:end}
-.intro h2{font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.12;letter-spacing:-.03em;margin:0;max-width:500px}
-.intro p{max-width:440px;margin:0 0 26px;color:var(--muted)}
-.button{display:inline-block;background:var(--ink);color:var(--paper);padding:14px 24px;text-decoration:none;font-size:14px;transition:background .2s ease,transform .2s ease}
-.button:hover{background:var(--accent);transform:translateY(-2px)}
+.intro h2{font-weight:500;font-size:clamp(28px,3.8vw,52px);line-height:1.12;letter-spacing:-.03em;margin:0;max-width:520px}
+.intro p{max-width:460px;margin:0 0 26px;color:var(--muted)}
+.button{
+  display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--paper);padding:14px 20px;
+  text-decoration:none;font-size:14px;transition:background .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.button .arrow{transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.button:hover{background:var(--accent);color:var(--accent-contrast);transform:translateY(-2px);box-shadow:var(--shadow)}
+.button:hover .arrow{transform:translateY(2px)}
 .note{font-size:12px;color:var(--muted);margin-top:12px!important}
-section{border-top:1px solid var(--rule);padding:45px 0 65px}
-.section-title{display:flex;justify-content:space-between;gap:30px;margin-bottom:30px}
+section{position:relative;border-top:1px solid var(--rule);padding:52px 0 76px;transition:border-color .38s ease}
+.section-title{display:flex;justify-content:space-between;gap:30px;margin-bottom:34px}
+.section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
 h2{font-size:26px;font-weight:500;letter-spacing:-.025em;margin:0}
-.story-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:8vw;align-items:start}
-.story-statement{font-size:clamp(38px,5.4vw,78px);line-height:1.02;letter-spacing:-.045em;font-weight:500;margin:0;max-width:820px}
-.story-copy{max-width:520px;color:var(--muted)}
+.story-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:8vw;align-items:start}
+.story-statement{font-size:clamp(42px,6vw,92px);line-height:.99;letter-spacing:-.052em;font-weight:500;margin:0;max-width:930px}
+.story-copy{max-width:560px;color:var(--muted);font-size:18px}
 .story-copy p{margin:0 0 20px}
 .story-copy p:last-child{margin-bottom:0}
-.story-principles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);margin-top:52px}
-.story-principle{padding:18px 28px 0 0;min-height:120px;border-right:1px solid var(--rule)}
+.story-chapters{margin-top:78px;border-top:1px solid var(--rule)}
+.story-chapter{
+  display:grid;grid-template-columns:120px minmax(220px,.75fr) minmax(300px,1.25fr);
+  gap:36px;padding:34px 0;border-bottom:1px solid var(--rule);align-items:start;
+}
+.story-index{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.story-chapter h3{font-size:clamp(25px,3vw,42px);line-height:1.03;letter-spacing:-.035em;font-weight:500;margin:0}
+.story-chapter p{margin:0;color:var(--muted);max-width:650px}
+.story-quote{
+  margin:78px 0 0;
+  padding:42px 0 0;
+  border-top:1px solid var(--rule);
+  font-size:clamp(38px,5.5vw,82px);
+  line-height:1.01;
+  letter-spacing:-.047em;
+  font-weight:500;
+  max-width:1240px;
+}
+.story-quote span{color:var(--muted)}
+.story-principles{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule);margin-top:64px}
+.story-principle{padding:20px 28px 4px 0;min-height:145px;border-right:1px solid var(--rule)}
 .story-principle:not(:first-child){padding-left:28px}
 .story-principle:last-child{border-right:0}
-.story-principle strong{display:block;font-weight:500;margin-bottom:22px}
+.story-principle strong{display:block;font-weight:500;font-size:18px;margin-bottom:30px}
 .story-principle span{font-size:13px;color:var(--muted)}
-.control{font-size:13px;display:flex;align-items:center;gap:15px}
-.control input{width:140px;accent-color:var(--accent)}
-output{min-width:30px;font-variant-numeric:tabular-nums}
-textarea{width:100%;display:block;background:transparent;color:inherit;resize:vertical;border:0;border-bottom:1px solid var(--rule);padding:25px 0;font-size:clamp(40px,6.7vw,96px);font-weight:500;line-height:1.15;letter-spacing:-.035em;min-height:235px;border-radius:0;transition:border-color .2s ease}
+.try-head{display:flex;justify-content:space-between;gap:30px;align-items:center;margin-bottom:22px}
+.weight-control{
+  display:flex;align-items:center;gap:13px;border:1px solid var(--rule);border-radius:999px;padding:8px 11px 8px 14px;
+  background:var(--surface);min-width:min(410px,100%);transition:border-color .2s ease,background .38s ease;
+}
+.weight-control:hover{border-color:var(--ink)}
+.weight-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+.slider-wrap{position:relative;flex:1;display:flex;align-items:center;height:24px}
+#weight{
+  --pct:50%;
+  width:100%;height:20px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:pointer;
+}
+#weight::-webkit-slider-runnable-track{
+  height:2px;border-radius:999px;
+  background:linear-gradient(to right,var(--ink) 0 var(--pct),var(--rule) var(--pct) 100%);
+}
+#weight::-moz-range-track{height:2px;border-radius:999px;background:var(--rule)}
+#weight::-moz-range-progress{height:2px;border-radius:999px;background:var(--ink)}
+#weight::-webkit-slider-thumb{
+  appearance:none;-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--paper);
+  border:2px solid var(--ink);margin-top:-7px;box-shadow:0 0 0 4px var(--surface);transition:transform .16s ease,background .38s ease;
+}
+#weight::-moz-range-thumb{
+  width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);
+  box-shadow:0 0 0 4px var(--surface);transition:transform .16s ease,background .38s ease;
+}
+#weight:hover::-webkit-slider-thumb,#weight:focus-visible::-webkit-slider-thumb{transform:scale(1.16)}
+#weight:hover::-moz-range-thumb,#weight:focus-visible::-moz-range-thumb{transform:scale(1.16)}
+.weight-value{
+  min-width:48px;text-align:center;padding:5px 7px;border-radius:999px;background:var(--ink);color:var(--paper);
+  font-size:12px;font-variant-numeric:tabular-nums;line-height:1;transition:background .38s ease,color .38s ease;
+}
+.slider-scale{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:0 3px;margin-top:3px}
+textarea{
+  width:100%;display:block;background:transparent;color:inherit;resize:vertical;border:0;border-bottom:1px solid var(--rule);
+  padding:30px 0 32px;font-size:clamp(40px,6.7vw,96px);font-weight:500;line-height:1.12;letter-spacing:-.035em;
+  min-height:235px;border-radius:0;transition:border-color .2s ease,color .38s ease;
+}
 textarea:focus{outline:none;border-color:var(--ink)}
-.alphabet{font-size:clamp(22px,3vw,42px);line-height:1.6;overflow-wrap:anywhere;letter-spacing:.015em;margin:35px 0 0}
+.alphabet{font-size:clamp(22px,3vw,42px);line-height:1.6;overflow-wrap:anywhere;letter-spacing:.015em;margin:38px 0 0}
 .weights{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
-.weight{border-top:1px solid var(--rule);padding-top:15px}
+.weight{position:relative;border-top:1px solid var(--rule);padding-top:15px;overflow:hidden}
+.weight::before{content:"";position:absolute;left:0;top:-1px;width:100%;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.weight:hover::before{transform:scaleX(1)}
 .weight small{display:block;color:var(--muted);font-size:11px;margin-bottom:15px}
-.weight p{font-size:clamp(28px,3.3vw,48px);letter-spacing:-.03em;line-height:1.1;margin:0;transition:transform .22s ease}
-.weight:hover p{transform:translateX(4px)}
+.weight p{font-size:clamp(28px,3.3vw,48px);letter-spacing:-.03em;line-height:1.1;margin:0;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.weight:hover p{transform:translateX(6px)}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:45px}
 .contact h2{font-size:clamp(35px,5vw,64px);line-height:1.1}
 .contact p{margin:0 0 20px;color:var(--muted)}
 .contact a{display:block;width:fit-content;font-size:clamp(16px,2vw,26px);margin-top:12px;overflow-wrap:anywhere;text-decoration-color:var(--rule);transition:text-decoration-color .2s ease}
 .contact a:hover{text-decoration-color:currentColor}
-.details{font-size:13px;color:var(--muted);max-width:650px;margin:35px 0 0}
+.details{font-size:13px;color:var(--muted);max-width:680px;margin:35px 0 0}
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:0;padding-bottom:40px}
 .skip{position:absolute;top:-100px}
-.skip:focus{top:0;background:var(--paper);padding:10px;z-index:10}
-.hero .eyebrow,.hero h1,.hero .intro{opacity:0;transform:translateY(12px)}
-body.ready .hero .eyebrow{animation:enter .65s cubic-bezier(.2,.7,.2,1) .05s forwards}
-body.ready .hero h1{animation:enter .8s cubic-bezier(.2,.7,.2,1) .13s forwards}
-body.ready .hero .intro{animation:enter .75s cubic-bezier(.2,.7,.2,1) .24s forwards}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-.reveal.is-visible{opacity:1;transform:none}
-@keyframes enter{to{opacity:1;transform:none}}
+.skip:focus{top:0;background:var(--paper);padding:10px;z-index:110}
+
+/* Motion */
+.hero .eyebrow,.hero h1,.hero .intro{opacity:0;filter:blur(7px);transform:translateY(18px)}
+body.ready .hero .eyebrow{animation:heroEnter .72s cubic-bezier(.18,.74,.18,1) .03s forwards}
+body.ready .hero h1{animation:heroEnter 1s cubic-bezier(.18,.74,.18,1) .12s forwards}
+body.ready .hero .intro{animation:heroEnter .9s cubic-bezier(.18,.74,.18,1) .28s forwards}
+.reveal{opacity:0;filter:blur(8px);transform:translateY(28px);transition:opacity .82s cubic-bezier(.18,.74,.18,1),transform .82s cubic-bezier(.18,.74,.18,1),filter .82s ease}
+.reveal.is-visible{opacity:1;filter:blur(0);transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}
+.reveal[data-delay="2"]{transition-delay:.16s}
+.reveal[data-delay="3"]{transition-delay:.24s}
+.rule-reveal::after{
+  content:"";position:absolute;left:0;top:-1px;width:100%;height:1px;background:var(--ink);
+  transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.18,.74,.18,1) .15s;
+}
+.rule-reveal.is-visible::after{transform:scaleX(1)}
+.story-chapter .story-index,.story-chapter h3,.story-chapter p{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .7s cubic-bezier(.18,.74,.18,1)}
+.story-chapter.is-visible .story-index{opacity:1;transform:none;transition-delay:.04s}
+.story-chapter.is-visible h3{opacity:1;transform:none;transition-delay:.11s}
+.story-chapter.is-visible p{opacity:1;transform:none;transition-delay:.18s}
+@keyframes heroEnter{to{opacity:1;filter:blur(0);transform:none}}
+
+@media(max-width:900px){
+  .story-chapter{grid-template-columns:70px 1fr;gap:22px}
+  .story-chapter p{grid-column:2}
+  .story-principles{grid-template-columns:1fr 1fr}
+  .story-principle:nth-child(2){border-right:0}
+  .story-principle:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+}
 @media(max-width:760px){
-  .story-grid{grid-template-columns:1fr;gap:30px}
-  .story-principles{grid-template-columns:1fr}
-  .story-principle,.story-principle:not(:first-child){padding:18px 0;border-right:0;border-bottom:1px solid var(--rule);min-height:0}
-  .story-principle:last-child{border-bottom:0}
+  .story-intro{grid-template-columns:1fr;gap:30px}
+  .story-chapter{grid-template-columns:1fr;gap:12px}
+  .story-chapter p{grid-column:1}
+  .story-index{margin-bottom:8px}
+  .try-head{align-items:flex-start;flex-direction:column}
+  .weight-control{width:100%;min-width:0}
 }
 @media(max-width:650px){
   .wrap{padding:0 6vw}
-  nav{gap:18px}
-  nav a:first-child{display:none}
+  .header-actions{gap:12px}
+  nav{gap:16px}
+  nav a:nth-child(1),nav a:nth-child(3){display:none}
+  .theme-toggle{padding:0 10px}
+  .theme-label{display:none}
   .hero{padding-top:35px}
-  h1{margin:40px 0}
+  .hero-top{display:block}
+  .hero-top .eyebrow:last-child{display:block;margin-top:7px}
+  .hero h1{margin:40px 0}
   .intro,.contact{grid-template-columns:1fr;gap:25px}
   .section-title{flex-direction:column;gap:20px}
-  .weights{grid-template-columns:repeat(2,1fr)}
+  .story-principles{grid-template-columns:1fr}
+  .story-principle,.story-principle:not(:first-child){border-right:0;border-bottom:1px solid var(--rule);padding:18px 0;min-height:0}
+  .story-principle:last-child{border-bottom:0}
+  .weights{grid-template-columns:repeat(2,1fr);gap:24px 18px}
   textarea{min-height:180px}
   footer{align-items:start;flex-direction:column;gap:12px}
-  section{padding:35px 0 45px}
+  section{padding:40px 0 56px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .hero .eyebrow,.hero h1,.hero .intro,.reveal{opacity:1;transform:none;animation:none!important;transition:none!important}
-  .button,.weight p{transition:none}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .hero .eyebrow,.hero h1,.hero .intro,.reveal,.story-chapter .story-index,.story-chapter h3,.story-chapter p{opacity:1;filter:none;transform:none!important}
 }
 </style>
+<script>
+(function(){
+  try{
+    const stored=localStorage.getItem('aarau-theme');
+    const dark=stored?stored==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.dataset.theme=dark?'dark':'light';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',dark?'#161816':'#f2f0e9');
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header>
   <a href="index.html" class="logo">Aarau</a>
-  <nav aria-label="Main">
-    <a href="#story">Story</a>
-    <a href="#try">Try it</a>
-    <a href="license.html">License</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="header-actions">
+    <nav aria-label="Main">
+      <a href="#story">Story</a>
+      <a href="#try">Try it</a>
+      <a href="license.html">License</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="theme-dot" aria-hidden="true"></span>
+      <span class="theme-label">Dark</span>
+    </button>
+  </div>
 </header>
 
 <main id="main">
-  <div class="hero">
-    <span class="eyebrow">Original neo-grotesk / By Benjamin Miles</span>
-    <h1>Aarau</h1>
+  <div class="hero" id="hero">
+    <div class="hero-top">
+      <span class="eyebrow">Original neo-grotesk / By Benjamin Miles</span>
+      <span class="eyebrow">Nine weights / Variable / 100—900</span>
+    </div>
+    <h1 id="heroTitle">Aarau</h1>
     <div class="intro">
       <h2>Clear by design.<br>Made for your words.</h2>
       <div>
         <p>A calm, modern sans serif for identities, interfaces and everyday communication. Nine weights, with room to find your voice.</p>
-        <a class="button" href="downloads/Aarau-fonts.zip" download>Download Aarau ↓</a>
+        <a class="button" href="downloads/Aarau-fonts.zip" download>Download Aarau <span class="arrow">↓</span></a>
         <p class="note">Version 0.1 · Development release · <a href="license.html">SIL Open Font License</a></p>
       </div>
     </div>
   </div>
 
-  <section id="story" class="reveal">
+  <section id="story" class="reveal rule-reveal">
     <div class="section-title">
       <h2>The story.</h2>
-      <span class="eyebrow">Quietly distinctive</span>
+      <span class="section-kicker">Why Aarau exists</span>
     </div>
-    <div class="story-grid">
-      <p class="story-statement">Neutral at first glance.<br>Distinct in the details.</p>
+
+    <div class="story-intro">
+      <p class="story-statement">A typeface built to be noticed slowly.</p>
       <div class="story-copy">
-        <p>Aarau started with a simple idea: a typeface should be able to carry an identity without overpowering it. It should feel considered, useful and familiar, while still having enough character to be remembered.</p>
-        <p>Rather than chasing novelty, Aarau focuses on proportion, rhythm and restraint. The personality lives in the small decisions — how letters sit together, how weight changes across the family, and how the typeface holds its voice from interface text to oversized headlines.</p>
-        <p>The result is a neo-grotesk designed to work quietly in the background when it needs to, and step forward when the words need presence.</p>
+        <p>Aarau began with a frustration: too many modern sans serifs either disappear completely or try too hard to prove they are different. The goal was to sit in the space between those two extremes.</p>
+        <p>It needed to feel familiar enough to use every day, but considered enough that a brand, interface or publication could build a voice around it. Not loud. Not anonymous. Just deliberate.</p>
       </div>
     </div>
-    <div class="story-principles">
-      <div class="story-principle"><strong>Calm</strong><span>Made to support the message instead of competing with it.</span></div>
-      <div class="story-principle"><strong>Precise</strong><span>Controlled spacing, proportion and weight give the family its rhythm.</span></div>
-      <div class="story-principle"><strong>Flexible</strong><span>Nine weights and a variable axis let one voice move across many contexts.</span></div>
+
+    <div class="story-chapters">
+      <article class="story-chapter chapter-reveal">
+        <span class="story-index">01</span>
+        <h3>Start with restraint.</h3>
+        <p>The foundation is neo-grotesk: clear forms, practical proportions and a rhythm that does not fight the words. Aarau avoids decoration for its own sake. Its identity comes from the relationship between shapes rather than one attention-seeking letter.</p>
+      </article>
+      <article class="story-chapter chapter-reveal">
+        <span class="story-index">02</span>
+        <h3>Let details do the work.</h3>
+        <p>The personality lives in small decisions: how a terminal finishes, how open a counter feels, how letters sit beside one another, and how those choices hold together across a whole family. Up close, those details matter. In a paragraph, they become rhythm.</p>
+      </article>
+      <article class="story-chapter chapter-reveal">
+        <span class="story-index">03</span>
+        <h3>Design one voice, not nine fonts.</h3>
+        <p>Aarau runs from Thin 100 to Black 900, but the intention is continuity. Weight should change the volume of the typeface without changing its character. The variable axis lets that voice move continuously instead of forcing every use into a fixed preset.</p>
+      </article>
+      <article class="story-chapter chapter-reveal">
+        <span class="story-index">04</span>
+        <h3>Make it useful first.</h3>
+        <p>The family is meant for real work: interfaces, identities, editorial layouts, packaging, presentations and everyday communication. Large or small, quiet or assertive, Aarau should keep the same underlying tone.</p>
+      </article>
+    </div>
+
+    <p class="story-quote reveal" data-delay="1">Neutral at first glance. <span>Distinct in the details.</span></p>
+
+    <div class="story-principles reveal" data-delay="2">
+      <div class="story-principle"><strong>Calm</strong><span>Supports the message instead of competing with it.</span></div>
+      <div class="story-principle"><strong>Precise</strong><span>Built around proportion, spacing and controlled rhythm.</span></div>
+      <div class="story-principle"><strong>Flexible</strong><span>Nine weights and a continuous variable axis from 100 to 900.</span></div>
+      <div class="story-principle"><strong>Useful</strong><span>Made for identities, interfaces, editorial work and everyday text.</span></div>
     </div>
   </section>
 
-  <section id="try" class="reveal">
-    <div class="section-title">
-      <h2>Give it a word.</h2>
-      <label class="control" for="weight">Weight <input id="weight" type="range" min="100" max="900" value="500" step="1"><output id="value" for="weight">500</output></label>
+  <section id="try" class="reveal rule-reveal">
+    <div class="try-head">
+      <div>
+        <h2>Give it a word.</h2>
+        <p class="note">Type anything. Move through the family continuously.</p>
+      </div>
+      <div class="weight-control">
+        <span class="weight-label">Weight</span>
+        <div style="flex:1">
+          <div class="slider-wrap">
+            <input id="weight" type="range" min="100" max="900" value="500" step="1" aria-label="Aarau font weight">
+          </div>
+          <div class="slider-scale" aria-hidden="true"><span>100</span><span>900</span></div>
+        </div>
+        <output class="weight-value" id="value" for="weight">500</output>
+      </div>
     </div>
     <textarea id="sample" aria-label="Try Aarau with your own text" spellcheck="false">Good ideas, clearly expressed.</textarea>
-    <p class="note">Type your own text. Move the slider to explore the family.</p>
     <p class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ? , ; : . “ ”</p>
   </section>
 
-  <section class="reveal">
+  <section class="reveal rule-reveal">
     <div class="section-title">
       <h2>One family. Nine weights.</h2>
       <span class="eyebrow">100—900 / Variable</span>
@@ -174,7 +379,7 @@ body.ready .hero .intro{animation:enter .75s cubic-bezier(.2,.7,.2,1) .24s forwa
     <p class="details">Includes static TTF and OTF fonts, webfonts and a variable font. Aarau 0.1 is still being refined; broader language, print and application testing remains in progress.</p>
   </section>
 
-  <section class="contact reveal" id="contact">
+  <section class="contact reveal rule-reveal" id="contact">
     <h2>Let’s talk type.</h2>
     <div>
       <p>Questions about Aarau, feedback or collaborations?<br>Get in touch with Benjamin Miles.</p>
@@ -191,10 +396,42 @@ body.ready .hero .intro{animation:enter .75s cubic-bezier(.2,.7,.2,1) .24s forwa
 </div>
 
 <script>
-const w=document.getElementById('weight'),s=document.getElementById('sample'),o=document.getElementById('value');
-w.addEventListener('input',()=>{s.style.fontWeight=w.value;o.value=w.value});
+const root=document.documentElement;
+const themeToggle=document.getElementById('themeToggle');
+const themeLabel=themeToggle.querySelector('.theme-label');
+const themeMeta=document.querySelector('meta[name="theme-color"]');
+
+function applyTheme(theme,save=true){
+  const dark=theme==='dark';
+  root.dataset.theme=dark?'dark':'light';
+  themeToggle.setAttribute('aria-pressed',String(dark));
+  themeToggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+  themeLabel.textContent=dark?'Light':'Dark';
+  themeMeta.setAttribute('content',dark?'#161816':'#f2f0e9');
+  if(save){try{localStorage.setItem('aarau-theme',dark?'dark':'light')}catch(e){}}
+}
+applyTheme(root.dataset.theme,false);
+themeToggle.addEventListener('click',()=>applyTheme(root.dataset.theme==='dark'?'light':'dark'));
+
+const w=document.getElementById('weight');
+const s=document.getElementById('sample');
+const o=document.getElementById('value');
+
+function updateWeight(){
+  const value=Number(w.value);
+  const pct=((value-100)/800)*100;
+  s.style.fontWeight=value;
+  o.value=value;
+  w.style.setProperty('--pct',pct+'%');
+}
+w.addEventListener('input',updateWeight);
+updateWeight();
+
 requestAnimationFrame(()=>document.body.classList.add('ready'));
+
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealTargets=document.querySelectorAll('.reveal,.chapter-reveal');
+
 if(!reduced&&'IntersectionObserver' in window){
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
@@ -203,11 +440,36 @@ if(!reduced&&'IntersectionObserver' in window){
         observer.unobserve(entry.target);
       }
     });
-  },{threshold:.12,rootMargin:'0px 0px -45px'});
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  },{threshold:.12,rootMargin:'0px 0px -55px'});
+  revealTargets.forEach(el=>observer.observe(el));
 }else{
-  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
+  revealTargets.forEach(el=>el.classList.add('is-visible'));
 }
+
+const progress=document.getElementById('progress');
+const hero=document.getElementById('hero');
+const heroTitle=document.getElementById('heroTitle');
+let ticking=false;
+
+function onScroll(){
+  if(ticking)return;
+  ticking=true;
+  requestAnimationFrame(()=>{
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    const pct=max>0?Math.min(1,window.scrollY/max):0;
+    progress.style.transform='scaleX('+pct+')';
+
+    if(!reduced){
+      const heroRect=hero.getBoundingClientRect();
+      const heroProgress=Math.max(0,Math.min(1,-heroRect.top/Math.max(1,hero.offsetHeight)));
+      heroTitle.style.setProperty('--hero-shift',(heroProgress*26)+'px');
+      heroTitle.style.fontWeight=String(Math.round(600-(heroProgress*70)));
+    }
+    ticking=false;
+  });
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
 </script>
 </body>
 </html>
