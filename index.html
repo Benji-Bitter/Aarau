@@ -251,6 +251,75 @@ body.ready .hero .intro{animation:heroEnter .9s cubic-bezier(.18,.74,.18,1) .28s
   .hero .eyebrow,.hero h1,.hero .intro,.hero-bottom,.reveal,.story-chapter *{opacity:1!important;filter:none!important;transform:none!important;animation:none!important}
   .progress,.theme-toggle{display:none}
 }
+
+/* Mobile editorial layout: consistent gutters, readable rhythm, generous controls. */
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+button,a,input,textarea{-webkit-tap-highlight-color:transparent}
+.theme-toggle{justify-content:center}
+@media(max-width:760px){
+  .wrap{padding-inline:24px}
+  header{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 0 0}
+  .logo{font-size:28px;grid-column:1;grid-row:1}
+  .header-actions{display:contents}
+  .theme-toggle{grid-column:2;grid-row:1;min-width:72px;height:44px;padding:0 12px}
+  .theme-label{display:inline}
+  header nav,header nav.topnav{grid-column:1/-1;grid-row:2;display:flex;justify-content:space-between;gap:12px;width:100%;font-size:13px;border-top:1px solid var(--rule-soft)}
+  header nav a,header nav.topnav a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink)}
+  header nav a::after{bottom:8px}
+  .hero{padding:30px 0 48px}
+  .hero-top{display:flex;flex-direction:column;gap:6px}
+  .hero-top .eyebrow:last-child{margin:0}
+  .eyebrow,.section-kicker{font-size:10px;letter-spacing:.08em}
+  footer{padding:24px 0 32px;gap:16px;font-size:12px}
+  footer a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media(max-width:360px){.wrap{padding-inline:20px}}
+
+@media(max-width:760px){
+  .hero h1{font-size:clamp(96px,27vw,196px);letter-spacing:-.065em;line-height:1;margin:30px 0 32px;will-change:auto}
+  .intro{grid-template-columns:1fr;gap:22px}
+  .intro h2{font-size:clamp(30px,7.8vw,46px);line-height:1.08;letter-spacing:-.035em}
+  .intro p{font-size:16px;line-height:1.6;max-width:40ch;margin-bottom:24px}
+  .button{display:flex;justify-content:space-between;min-height:54px;padding:16px 20px;font-size:14px;width:100%}
+  .intro p.note{font-size:11px;line-height:1.6;margin:12px 0 0;max-width:none}
+  section{padding:32px 0 44px}
+  h2{font-size:27px;line-height:1.15;letter-spacing:-.035em}
+  .section-title{flex-direction:column;gap:10px;margin-bottom:26px}
+  .try-head{gap:20px;margin-bottom:0}
+  .try-head .note{margin-bottom:0;line-height:1.6}
+  .weight-control{border-radius:8px;gap:16px;padding:12px 14px;width:100%}
+  .slider-wrap,#weight{height:44px}
+  #weight::-webkit-slider-thumb{width:24px;height:24px;margin-top:-11px}
+  #weight::-moz-range-thumb{width:20px;height:20px}
+  .slider-scale{margin-top:0}
+  textarea{font-size:clamp(36px,9.4vw,62px);line-height:1.16;padding:28px 0;min-height:180px;resize:none}
+  .alphabet{font-size:18px;line-height:1.8;letter-spacing:.02em;margin-top:24px}
+  .weights{grid-template-columns:1fr;gap:0}
+  .weight{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:20px 0;overflow:visible}
+  .weight small{font-size:11px;margin:0;white-space:nowrap}
+  .weight p{font-size:36px;white-space:nowrap;letter-spacing:-.035em}
+  .weight:hover p{transform:none}
+  .details{font-size:12px;line-height:1.7;margin-top:20px}
+  .story-statement{font-size:clamp(38px,10vw,66px);line-height:1.04;letter-spacing:-.045em}
+  .story-intro{gap:24px}
+  .story-copy{font-size:16px;line-height:1.65}
+  .story-chapters{margin-top:32px}
+  .story-chapter{grid-template-columns:28px 1fr;gap:12px;padding:26px 0}
+  .story-index{padding-top:5px;margin:0;font-size:10px}
+  .story-chapter h3{font-size:27px;line-height:1.12}
+  .story-chapter p{grid-column:2;font-size:15px;line-height:1.65}
+  .story-quote{margin-top:36px;padding-top:30px;font-size:38px;line-height:1.08}
+  .story-principles{margin-top:32px;grid-template-columns:1fr 1fr}
+  .story-principle,.story-principle:not(:first-child){padding:18px 12px 18px 0;border-right:0;min-height:0}
+  .story-principle:nth-child(even){padding-left:16px}
+  .story-principle strong{font-size:16px;margin-bottom:10px}
+  .story-principle span{font-size:12px;line-height:1.5;display:block}
+  .contact{grid-template-columns:1fr;gap:20px}
+  .contact h2{font-size:36px}
+  .contact p{font-size:15px;line-height:1.65}
+  .contact a{font-size:clamp(15px,4.1vw,22px);min-height:44px;margin:0;display:flex;align-items:center}
+}
+
 </style>
 <script>
 (function(){
@@ -300,6 +369,46 @@ body.ready .hero .intro{animation:heroEnter .9s cubic-bezier(.18,.74,.18,1) .28s
     </div>
   </div>
 
+  <section id="try" class="reveal rule-reveal">
+    <div class="try-head">
+      <div>
+        <h2>Give it a word.</h2>
+        <p class="note">Type anything. Move through the family continuously.</p>
+      </div>
+      <div class="weight-control">
+        <span class="weight-label">Weight</span>
+        <div style="flex:1">
+          <div class="slider-wrap">
+            <input id="weight" type="range" min="100" max="900" value="500" step="1" aria-label="Aarau font weight">
+          </div>
+          <div class="slider-scale" aria-hidden="true"><span>100</span><span>900</span></div>
+        </div>
+        <output class="weight-value" id="value" for="weight">500</output>
+      </div>
+    </div>
+    <textarea id="sample" aria-label="Try Aarau with your own text" spellcheck="false">Good ideas, clearly expressed.</textarea>
+    <p class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ? , ; : . “ ”</p>
+  </section>
+
+  <section class="reveal rule-reveal">
+    <div class="section-title">
+      <h2>One family. Nine weights.</h2>
+      <span class="eyebrow">100—900 / Variable</span>
+    </div>
+    <div class="weights">
+      <div class="weight"><small>Thin / 100</small><p style="font-weight:100">Aa, Aarau.</p></div>
+      <div class="weight"><small>ExtraLight / 200</small><p style="font-weight:200">Aa, Aarau.</p></div>
+      <div class="weight"><small>Light / 300</small><p style="font-weight:300">Aa, Aarau.</p></div>
+      <div class="weight"><small>Regular / 400</small><p style="font-weight:400">Aa, Aarau.</p></div>
+      <div class="weight"><small>Medium / 500</small><p style="font-weight:500">Aa, Aarau.</p></div>
+      <div class="weight"><small>SemiBold / 600</small><p style="font-weight:600">Aa, Aarau.</p></div>
+      <div class="weight"><small>Bold / 700</small><p style="font-weight:700">Aa, Aarau.</p></div>
+      <div class="weight"><small>ExtraBold / 800</small><p style="font-weight:800">Aa, Aarau.</p></div>
+      <div class="weight"><small>Black / 900</small><p style="font-weight:900">Aa, Aarau.</p></div>
+    </div>
+    <p class="details">Includes static TTF and OTF fonts, webfonts and a variable font. Aarau 0.1 is still being refined; broader language, print and application testing remains in progress.</p>
+  </section>
+
   <section id="story" class="reveal rule-reveal">
     <div class="section-title">
       <h2>The story.</h2>
@@ -345,46 +454,6 @@ body.ready .hero .intro{animation:heroEnter .9s cubic-bezier(.18,.74,.18,1) .28s
       <div class="story-principle"><strong>Flexible</strong><span>Nine weights and a continuous variable axis from 100 to 900.</span></div>
       <div class="story-principle"><strong>Useful</strong><span>Made for identities, interfaces, editorial work and everyday text.</span></div>
     </div>
-  </section>
-
-  <section id="try" class="reveal rule-reveal">
-    <div class="try-head">
-      <div>
-        <h2>Give it a word.</h2>
-        <p class="note">Type anything. Move through the family continuously.</p>
-      </div>
-      <div class="weight-control">
-        <span class="weight-label">Weight</span>
-        <div style="flex:1">
-          <div class="slider-wrap">
-            <input id="weight" type="range" min="100" max="900" value="500" step="1" aria-label="Aarau font weight">
-          </div>
-          <div class="slider-scale" aria-hidden="true"><span>100</span><span>900</span></div>
-        </div>
-        <output class="weight-value" id="value" for="weight">500</output>
-      </div>
-    </div>
-    <textarea id="sample" aria-label="Try Aarau with your own text" spellcheck="false">Good ideas, clearly expressed.</textarea>
-    <p class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; ! ? , ; : . “ ”</p>
-  </section>
-
-  <section class="reveal rule-reveal">
-    <div class="section-title">
-      <h2>One family. Nine weights.</h2>
-      <span class="eyebrow">100—900 / Variable</span>
-    </div>
-    <div class="weights">
-      <div class="weight"><small>Thin / 100</small><p style="font-weight:100">Aa, Aarau.</p></div>
-      <div class="weight"><small>ExtraLight / 200</small><p style="font-weight:200">Aa, Aarau.</p></div>
-      <div class="weight"><small>Light / 300</small><p style="font-weight:300">Aa, Aarau.</p></div>
-      <div class="weight"><small>Regular / 400</small><p style="font-weight:400">Aa, Aarau.</p></div>
-      <div class="weight"><small>Medium / 500</small><p style="font-weight:500">Aa, Aarau.</p></div>
-      <div class="weight"><small>SemiBold / 600</small><p style="font-weight:600">Aa, Aarau.</p></div>
-      <div class="weight"><small>Bold / 700</small><p style="font-weight:700">Aa, Aarau.</p></div>
-      <div class="weight"><small>ExtraBold / 800</small><p style="font-weight:800">Aa, Aarau.</p></div>
-      <div class="weight"><small>Black / 900</small><p style="font-weight:900">Aa, Aarau.</p></div>
-    </div>
-    <p class="details">Includes static TTF and OTF fonts, webfonts and a variable font. Aarau 0.1 is still being refined; broader language, print and application testing remains in progress.</p>
   </section>
 
   <section class="contact reveal rule-reveal" id="contact">
@@ -436,7 +505,7 @@ w.addEventListener('input',updateWeight);
 updateWeight();
 function fitSample(){
   s.style.height='auto';
-  s.style.height=Math.max(235,s.scrollHeight+2)+'px';
+  s.style.height=Math.max(window.innerWidth<=760?180:235,s.scrollHeight+2)+'px';
 }
 s.addEventListener('input',fitSample);
 w.addEventListener('input',fitSample);
