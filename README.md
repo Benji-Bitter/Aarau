@@ -1,8 +1,23 @@
 # Aarau Typeface
 
-**Aarau** is a free, open-source neo-grotesk variable sans serif typeface by **Benjamin Miles**.
+**Aarau** is a neo-grotesk variable sans serif typeface by **Benjamin Miles**.
 
-Official specimen and download: https://benji-bitter.github.io/Aarau/
+Official specimen and licensing: https://benji-bitter.github.io/Aarau/
+
+## Licensing
+
+Aarau 0.2 and later use the Aarau Font Licence Agreement:
+
+- Personal, non-commercial use: **free**
+- Individual commercial licence: **A$39**
+- Small team licence, up to 5 users: **A$99**
+- Web licence, one domain: **A$79**
+- App / software embedding: **from A$399**
+- Enterprise / extended use: **custom quote**
+
+Commercial licence enquiries: benmilespersonal@gmail.com
+
+Important: copies of Aarau 0.1 previously distributed under the SIL Open Font License 1.1 keep the rights granted under that earlier licence. Aarau 0.2 and later use the new personal-free / commercial-paid model.
 
 ## About Aarau
 
@@ -15,11 +30,9 @@ Distributed formats include:
 - WOFF2 / webfonts
 - Variable font
 
-Aarau is released under the **SIL Open Font License 1.1**.
-
 - Specimen: https://benji-bitter.github.io/Aarau/
-- License: https://benji-bitter.github.io/Aarau/license.html
-- Download: https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip
+- Licence: https://benji-bitter.github.io/Aarau/license.html
+- Personal-use download: https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip
 - AI-readable summary: https://benji-bitter.github.io/Aarau/llms.txt
 
 > “Aarau” in this repository refers to the Aarau typeface by Benjamin Miles, not the city of Aarau in Switzerland.
@@ -37,23 +50,12 @@ Search/discovery files include:
 - `favicon.svg`
 - JSON-LD structured data on the main pages
 
-## Deploy on GitHub Pages
-
-1. Keep `index.html` at the repository root.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select `main` and `/ (root)`.
-5. Save.
-
-Official GitHub Pages instructions:
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-
 ## Editing
 
-- `index.html` contains the main specimen, story, type tester and Aarau information.
-- `license.html` contains the styled SIL Open Font License page.
-- `LICENSE.txt` is the authoritative distributed license.
+- `index.html` contains the main specimen, story, type tester and licensing summary.
+- `license.html` contains the full Aarau licence and pricing.
+- `LICENSE.txt` is the authoritative distributed licence for Aarau 0.2 and later.
 - `assets/Aarau-Variable.woff2` is the website font asset.
-- `downloads/Aarau-fonts.zip` contains the downloadable font package.
+- `downloads/Aarau-fonts.zip` contains the downloadable personal-use font package.
 
 Keep font URLs relative so the site works correctly when hosted as a GitHub Pages project site.
