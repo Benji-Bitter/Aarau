@@ -45,7 +45,7 @@
 }
 </script>
 <style>
-@font-face{font-family:Aarau;src:url('assets/Aarau-Variable.woff2?v=c44777a71e85') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:Aarau;src:url('assets/Aarau-Variable.woff2?v=aarau020') format('woff2');font-weight:100 900;font-display:swap}
 :root{
   --paper:#f2f0e9;
   --ink:#222522;
@@ -480,7 +480,7 @@ function onScroll(){
 window.addEventListener('scroll',onScroll,{passive:true});
 onScroll();
 
-const sectionLinks=[...document.querySelectorAll('.sidebar a[href^="#section-"]')];
+const sectionLinks=[...document.querySelectorAll('.sidebar a[href^="#"]')];
 const sections=sectionLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
 if('IntersectionObserver' in window&&sections.length){
   const sectionObserver=new IntersectionObserver(entries=>{
