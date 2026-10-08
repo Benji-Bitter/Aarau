@@ -1,0 +1,25 @@
+# Aarau Typeface
+
+> Aarau is a free, open-source neo-grotesk variable sans serif typeface designed by Benjamin Miles.
+
+Canonical website: https://benji-bitter.github.io/Aarau/
+Source repository: https://github.com/Benji-Bitter/Aarau
+Designer: Benjamin Miles
+Version: 0.1 development release
+License: SIL Open Font License 1.1
+
+## Key facts
+- Aarau is a neo-grotesk sans serif typeface.
+- It includes nine static weights: Thin 100, ExtraLight 200, Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700, ExtraBold 800 and Black 900.
+- It includes a continuous variable font covering weight 100 through 900.
+- Distributed formats include TTF, OTF and WOFF2/webfonts.
+- Aarau is free to download and is licensed under the SIL Open Font License 1.1.
+- It is intended for identities, user interfaces, editorial design and everyday communication.
+
+## Primary pages
+- Homepage and specimen: https://benji-bitter.github.io/Aarau/
+- License: https://benji-bitter.github.io/Aarau/license.html
+- Font download: https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip
+
+## Entity disambiguation
+“Aarau” on this website refers to the Aarau typeface by Benjamin Miles, not the city of Aarau in Switzerland.
