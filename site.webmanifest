@@ -1,0 +1,10 @@
+{
+  "name": "Aarau Typeface",
+  "short_name": "Aarau",
+  "description": "Free open-source neo-grotesk variable typeface by Benjamin Miles.",
+  "start_url": "/Aarau/",
+  "scope": "/Aarau/",
+  "display": "standalone",
+  "background_color": "#f2f0e9",
+  "theme_color": "#f2f0e9"
+}
