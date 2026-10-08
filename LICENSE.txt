@@ -1,93 +1,125 @@
-Copyright (c) 2026 Benjamin Miles.
+AARAU FONT LICENCE AGREEMENT
+Version 1.0
+Effective for Aarau 0.2 and later
+Copyright (c) 2026 Benjamin Miles. All rights reserved.
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-https://openfontlicense.org
+IMPORTANT
+Aarau is free for personal, non-commercial use only. Commercial use requires a paid licence from Benjamin Miles before the commercial use begins.
 
+This licence applies to Aarau 0.2 and later distributions. Copies of Aarau 0.1 that were previously distributed under the SIL Open Font License 1.1 remain licensed under those earlier terms. This agreement does not revoke rights already granted for those legacy copies.
 
------------------------------------------------------------
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
------------------------------------------------------------
+1. DEFINITIONS
 
-PREAMBLE
-The goals of the Open Font License (OFL) are to stimulate worldwide
-development of collaborative font projects, to support the font creation
-efforts of academic and linguistic communities, and to provide a free and
-open framework in which fonts may be shared and improved in partnership
-with others.
+"Font Software" means the Aarau font files, including TTF, OTF, WOFF, WOFF2, variable-font files, and any accompanying files supplied by the copyright holder.
 
-The OFL allows the licensed fonts to be used, studied, modified and
-redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded,
-redistributed and/or sold with any software provided that any reserved
-names are not used by derivative works. The fonts and derivatives,
-however, cannot be released under any other type of license. The
-requirement for fonts to remain under this license does not apply
-to any document created using the fonts or their derivatives.
+"Personal Use" means use by one individual for private, educational, experimental, or non-commercial work that is not performed for a business, client, employer, paid organisation, monetised product, advertising campaign, or other commercial purpose.
 
-DEFINITIONS
-"Font Software" refers to the set of files released by the Copyright
-Holder(s) under this license and clearly marked as such. This may
-include source files, build scripts and documentation.
+"Commercial Use" means any use connected to a business, profession, client, employer, paid service, monetised activity, advertising, promotion, product for sale, company identity, website, application, software product, or other activity intended to generate revenue or commercial benefit.
 
-"Reserved Font Name" refers to any names specified as such after the
-copyright statement(s).
+2. OWNERSHIP
 
-"Original Version" refers to the collection of Font Software components as
-distributed by the Copyright Holder(s).
+Aarau and the Font Software are owned by Benjamin Miles and are protected by copyright and other applicable intellectual property laws. No ownership is transferred under this agreement.
 
-"Modified Version" refers to any derivative made by adding to, deleting,
-or substituting -- in part or in whole -- any of the components of the
-Original Version, by changing formats or by porting the Font Software to a
-new environment.
+3. FREE PERSONAL LICENCE
 
-"Author" refers to any designer, engineer, programmer, technical
-writer or other person who contributed to the Font Software.
+One individual may download, install, and use Aarau without charge for Personal Use.
 
-PERMISSION & CONDITIONS
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of the Font Software, to use, study, copy, merge, embed, modify,
-redistribute, and sell modified and unmodified copies of the Font
-Software, subject to the following conditions:
+Permitted Personal Use includes:
+- school and study work;
+- private design experiments;
+- personal, non-commercial artwork;
+- testing and evaluating the typeface;
+- a personal portfolio showing the individual's own non-commercial work.
 
-1) Neither the Font Software nor any of its individual components,
-in Original or Modified Versions, may be sold by itself.
+The free personal licence does not permit Commercial Use.
 
-2) Original or Modified Versions of the Font Software may be bundled,
-redistributed and/or sold with any software, provided that each copy
-contains the above copyright notice and this license. These can be
-included either as stand-alone text files, human-readable headers or
-in the appropriate machine-readable metadata fields within text or
-binary files as long as those fields can be easily viewed by the user.
+4. COMMERCIAL LICENCES
 
-3) No Modified Version of the Font Software may use the Reserved Font
-Name(s) unless explicit written permission is granted by the corresponding
-Copyright Holder. This restriction only applies to the primary font name as
-presented to the users.
+Commercial Use requires an appropriate paid licence.
 
-4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
-Software shall not be used to promote, endorse or advertise any
-Modified Version, except to acknowledge the contribution(s) of the
-Copyright Holder(s) and the Author(s) or with their explicit written
-permission.
+Current standard licence categories are:
 
-5) The Font Software, modified or unmodified, in part or in whole,
-must be distributed entirely under this license, and must not be
-distributed under any other license. The requirement for fonts to
-remain under this license does not apply to any document created
-using the Font Software.
+Individual Commercial Licence: A$39
+- one licensed user;
+- client work;
+- logos and identity artwork;
+- advertising, social media, print, packaging, presentations, and other static commercial output;
+- does not include webfont embedding, app/software embedding, redistribution of font files, or use by additional users.
 
-TERMINATION
-This license becomes null and void if any of the above conditions are
-not met.
+Small Team Licence: A$99
+- up to five licensed users within one company, studio, or organisation;
+- the same static commercial uses permitted by the Individual Commercial Licence;
+- does not include webfont embedding, app/software embedding, or redistribution of font files.
 
-DISCLAIMER
-THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
-OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
-DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
-OTHER DEALINGS IN THE FONT SOFTWARE.
+Web Licence: A$79 per domain
+- permits Aarau webfont files to be embedded and served on one licensed domain;
+- does not permit the font files to be offered for download or reused on unlicensed domains.
+
+App / Software Licence: from A$399 per app or software product
+- permits embedding Aarau in one licensed application or software product;
+- pricing may vary according to distribution, users, platforms, or scale.
+
+Enterprise / Extended Licence: custom quote
+- required for more than five font users, multiple domains or products, OEM use, server use, large-scale distribution, sublicensing requirements, or uses outside the standard licences.
+
+Prices may change for future purchases. A licence already purchased remains valid for the scope shown on the purchase record or written licence confirmation.
+
+5. CLIENT WORK
+
+A licensed designer may create final static artwork for a client under an Individual Commercial or Small Team Licence.
+
+A client must obtain its own appropriate licence if the client, its employees, contractors, or agents need to install, edit with, embed, or otherwise directly use the Font Software.
+
+6. WEB, APP, AND SOFTWARE EMBEDDING
+
+A desktop or static-output commercial licence does not permit webfont, app, game, software, e-book, digital-product, or other executable embedding unless the relevant embedding licence has been purchased.
+
+7. RESTRICTIONS
+
+Except where an applicable paid licence expressly permits it, you may not:
+- sell, sublicense, give away, share, or redistribute the Font Software;
+- upload the Font Software to a public font library or public download service;
+- make the Font Software available to unlicensed users;
+- resell the Font Software by itself or as part of a competing font collection;
+- convert or package the Font Software for redistribution;
+- remove or alter copyright, licence, or authorship information;
+- claim authorship or ownership of Aarau.
+
+8. MODIFICATIONS AND OUTLINES
+
+You may convert text set in Aarau to outlines, paths, pixels, or other static artwork for uses allowed by your licence.
+
+You may modify the Font Software for your own licensed use, but modified font files remain subject to this agreement and may not be redistributed, sold, sublicensed, or provided to third parties without written permission from Benjamin Miles.
+
+9. CLOUD AND TEAM TOOLS
+
+A licensed user may upload Aarau to a private design or collaboration service only when access to the font is limited to users covered by the applicable licence and the service does not make the font publicly downloadable or available to unlicensed users.
+
+10. TRANSFER AND SUBLICENSING
+
+Licences are non-transferable and may not be sublicensed unless Benjamin Miles agrees otherwise in writing.
+
+11. TERMINATION
+
+If you breach this agreement, your licence terminates automatically. You must stop using the Font Software for the affected use and remove unauthorised copies. Rights may be restored only with written permission from Benjamin Miles.
+
+12. WARRANTY AND LIABILITY
+
+The Font Software is provided "as is" without warranties of any kind to the maximum extent permitted by law. Benjamin Miles is not liable for indirect, incidental, special, or consequential loss arising from use of the Font Software, except where liability cannot legally be excluded.
+
+13. GOVERNING LAW
+
+This agreement is governed by the laws of New South Wales, Australia, subject to any mandatory consumer or other laws that apply.
+
+14. CONTACT AND COMMERCIAL LICENSING
+
+Commercial licence enquiries:
+benmilespersonal@gmail.com
+
+Official licence page:
+https://benji-bitter.github.io/Aarau/license.html
+
+Official Aarau website:
+https://benji-bitter.github.io/Aarau/
+
+Copyright (c) 2026 Benjamin Miles. All rights reserved.
