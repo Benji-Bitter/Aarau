@@ -279,6 +279,9 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border
 .license-card .price{font-size:clamp(30px,3.3vw,48px);letter-spacing:-.04em;line-height:1;margin:24px 0 18px}
 .license-card p{font-size:13px;color:var(--muted);margin:0 0 24px}
 .license-card a{margin-top:auto;width:fit-content}
+.license-card.featured{background:var(--surface);padding-right:22px}
+.license-card.featured .tier{color:var(--ink)}
+.license-card .badge{display:inline-block;width:fit-content;font-size:10px;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--rule);padding:4px 7px;border-radius:999px;margin:0 0 16px}
 @media(max-width:1050px){.license-grid{grid-template-columns:repeat(2,1fr)}.license-card{border-bottom:1px solid var(--rule)}.license-card:nth-child(even){border-right:0}.license-card:last-child{border-bottom:0}}
 @media(max-width:650px){.licensing-intro{grid-template-columns:1fr;gap:18px}.license-grid{grid-template-columns:1fr}.license-card,.license-card:not(:first-child){padding:20px 0;border-right:0;border-bottom:1px solid var(--rule);min-height:0}.license-card:last-child{border-bottom:0}}
 
@@ -442,6 +445,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
     <nav aria-label="Main">
       <a href="#story">Story</a>
       <a href="#try">Try it</a>
+      <a href="#licensing">Pricing</a>
       <a href="license.html">License</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -464,7 +468,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
       <div>
         <p>A calm, modern sans serif for identities, interfaces and everyday communication. Nine weights, with room to find your voice.</p>
         <a class="button" href="downloads/Aarau-fonts.zip" download>Personal use download <span class="arrow" aria-hidden="true">↓</span></a>
-        <p class="note">Version 0.2 · Free personal use · <a href="license.html">Commercial licences from A$39</a></p>
+        <p class="note">Version 0.2 · Free personal use · <a href="#licensing">See pricing from A$39</a></p>
       </div>
     </div>
   </div>
@@ -584,11 +588,11 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
 
   <section id="licensing" class="reveal rule-reveal">
     <div class="section-title">
-      <h2>Licensing.</h2>
-      <span class="section-kicker">Personal free / Commercial paid</span>
+      <h2>Pricing &amp; licensing.</h2>
+      <span class="section-kicker">AUD · one-time licences</span>
     </div>
     <div class="licensing-intro">
-      <h2>Use Aarau personally for free.<br>Licence it when the work makes money.</h2>
+      <h2>Personal use is free.<br>Commercial use starts at A$39.</h2>
       <p>School work, personal projects and non-commercial experimentation are free. Client work, company branding, advertising, products, business websites, apps and other commercial uses require a paid licence.</p>
     </div>
     <div class="license-grid">
@@ -597,7 +601,8 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
         <p>One person. Non-commercial personal projects, study, testing and personal portfolio work.</p>
         <a href="downloads/Aarau-fonts.zip" download>Download ↓</a>
       </article>
-      <article class="license-card">
+      <article class="license-card featured">
+        <span class="badge">Most common</span>
         <span class="tier">Individual commercial</span><div class="price">A$39</div>
         <p>One user. Client work, logos, print, social, advertising and commercial static output.</p>
         <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Individual%20Commercial%20Licence">Get licence ↗</a>
