@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Download Aarau, a free open-source neo-grotesk variable font by Benjamin Miles. Nine weights from Thin to Black, with TTF, OTF and WOFF2 files under the SIL Open Font License.">
+<meta name="description" content="Aarau is a neo-grotesk variable typeface by Benjamin Miles. Free for personal use, with paid commercial, web, app and enterprise licensing. Nine weights from Thin to Black.">
 <meta name="author" content="Benjamin Miles">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -16,12 +16,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aarau Typeface">
 <meta property="og:title" content="Aarau Typeface — Free Neo-Grotesk Variable Font">
-<meta property="og:description" content="A free open-source neo-grotesk typeface by Benjamin Miles. Nine weights, variable 100–900, TTF, OTF and WOFF2.">
+<meta property="og:description" content="A neo-grotesk variable typeface by Benjamin Miles. Free for personal use, with paid commercial licensing. Nine weights, variable 100–900.">
 <meta property="og:url" content="https://benji-bitter.github.io/Aarau/">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Aarau Typeface — Free Neo-Grotesk Variable Font">
-<meta name="twitter:description" content="Free open-source variable sans serif by Benjamin Miles. Nine weights, TTF, OTF and WOFF2.">
+<meta name="twitter:description" content="Neo-grotesk variable sans serif by Benjamin Miles. Free personal use, paid commercial licensing.">
 <title>Aarau Typeface — Free Neo-Grotesk Variable Font by Benjamin Miles</title>
 <script type="application/ld+json">
 {
@@ -33,7 +33,7 @@
       "url":"https://benji-bitter.github.io/Aarau/",
       "name":"Aarau Typeface",
       "alternateName":["Aarau Font","Aarau"],
-      "description":"Official website for Aarau, a free open-source neo-grotesk variable typeface by Benjamin Miles.",
+      "description":"Official website for Aarau, a neo-grotesk variable typeface by Benjamin Miles. Free for personal use with paid commercial licensing.",
       "inLanguage":"en",
       "publisher":{"@id":"https://benji-bitter.github.io/Aarau/#creator"}
     },
@@ -50,16 +50,23 @@
       "name":"Aarau",
       "alternateName":"Aarau Typeface",
       "url":"https://benji-bitter.github.io/Aarau/",
-      "description":"A free open-source neo-grotesk variable sans serif typeface with nine weights from 100 to 900.",
+      "description":"A neo-grotesk variable sans serif typeface with nine weights from 100 to 900. Free for personal use with paid commercial licensing.",
       "creator":{"@id":"https://benji-bitter.github.io/Aarau/#creator"},
       "copyrightHolder":{"@id":"https://benji-bitter.github.io/Aarau/#creator"},
       "copyrightYear":2026,
       "datePublished":"2026-10-07",
       "dateModified":"2026-10-08",
-      "version":"0.1",
-      "license":"https://openfontlicense.org/",
+      "version":"0.2",
+      "license":"https://benji-bitter.github.io/Aarau/license.html",
       "isAccessibleForFree":true,
-      "keywords":["Aarau typeface","Aarau font","free font","open source font","neo-grotesk font","variable font","sans serif","TTF","OTF","WOFF2"],
+      "offers":[
+        {"@type":"Offer","name":"Personal Use","price":"0","priceCurrency":"AUD","url":"https://benji-bitter.github.io/Aarau/license.html#personal"},
+        {"@type":"Offer","name":"Individual Commercial","price":"39","priceCurrency":"AUD","url":"https://benji-bitter.github.io/Aarau/license.html#commercial"},
+        {"@type":"Offer","name":"Small Team","price":"99","priceCurrency":"AUD","url":"https://benji-bitter.github.io/Aarau/license.html#commercial"},
+        {"@type":"Offer","name":"Web","price":"79","priceCurrency":"AUD","url":"https://benji-bitter.github.io/Aarau/license.html#commercial"},
+        {"@type":"Offer","name":"App / Software","price":"399","priceCurrency":"AUD","url":"https://benji-bitter.github.io/Aarau/license.html#commercial"}
+      ],
+      "keywords":["Aarau typeface","Aarau font","free personal use font","commercial font licence","neo-grotesk font","variable font","sans serif","TTF","OTF","WOFF2"],
       "encoding":{
         "@type":"MediaObject",
         "contentUrl":"https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip",
@@ -262,6 +269,19 @@ footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border
   .fact:nth-child(odd){border-right:0}
 }
 
+.licensing-intro{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:end;margin-bottom:34px}
+.licensing-intro p{margin:0;color:var(--muted);max-width:600px}
+.license-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.license-card{padding:22px 22px 26px 0;border-right:1px solid var(--rule);min-height:230px;display:flex;flex-direction:column}
+.license-card:not(:first-child){padding-left:22px}
+.license-card:last-child{border-right:0}
+.license-card .tier{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.license-card .price{font-size:clamp(30px,3.3vw,48px);letter-spacing:-.04em;line-height:1;margin:24px 0 18px}
+.license-card p{font-size:13px;color:var(--muted);margin:0 0 24px}
+.license-card a{margin-top:auto;width:fit-content}
+@media(max-width:1050px){.license-grid{grid-template-columns:repeat(2,1fr)}.license-card{border-bottom:1px solid var(--rule)}.license-card:nth-child(even){border-right:0}.license-card:last-child{border-bottom:0}}
+@media(max-width:650px){.licensing-intro{grid-template-columns:1fr;gap:18px}.license-grid{grid-template-columns:1fr}.license-card,.license-card:not(:first-child){padding:20px 0;border-right:0;border-bottom:1px solid var(--rule);min-height:0}.license-card:last-child{border-bottom:0}}
+
 /* Motion */
 
 body.ready .hero .eyebrow{animation:heroEnter .72s cubic-bezier(.18,.74,.18,1) .03s forwards}
@@ -443,8 +463,8 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
       <h2>Clear by design.<br>Made for your words.</h2>
       <div>
         <p>A calm, modern sans serif for identities, interfaces and everyday communication. Nine weights, with room to find your voice.</p>
-        <a class="button" href="downloads/Aarau-fonts.zip" download>Download Aarau <span class="arrow" aria-hidden="true">↓</span></a>
-        <p class="note">Version 0.1 · Development release · <a href="license.html">SIL Open Font License</a></p>
+        <a class="button" href="downloads/Aarau-fonts.zip" download>Personal use download <span class="arrow" aria-hidden="true">↓</span></a>
+        <p class="note">Version 0.2 · Free personal use · <a href="license.html">Commercial licences from A$39</a></p>
       </div>
     </div>
   </div>
@@ -486,7 +506,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
       <div class="weight"><small>ExtraBold / 800</small><p style="font-weight:800">Aa, Aarau.</p></div>
       <div class="weight"><small>Black / 900</small><p style="font-weight:900">Aa, Aarau.</p></div>
     </div>
-    <p class="details">Includes static TTF and OTF fonts, webfonts and a variable font. Aarau 0.1 is still being refined; broader language, print and application testing remains in progress.</p>
+    <p class="details">Includes static TTF and OTF fonts, webfonts and a variable font. Aarau 0.2 is still being refined; broader language, print and application testing remains in progress.</p>
   </section>
 
   <section id="story" class="reveal rule-reveal">
@@ -544,7 +564,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
     <div class="facts-grid">
       <article class="fact">
         <h3>What is Aarau?</h3>
-        <p>Aarau is a free, open-source neo-grotesk variable sans serif typeface designed by Benjamin Miles. It is built for brand identities, interfaces, editorial layouts and everyday communication.</p>
+        <p>Aarau is a neo-grotesk variable sans serif typeface designed by Benjamin Miles. It is free for personal, non-commercial use, with paid licences for commercial, web, app and enterprise use.</p>
       </article>
       <article class="fact">
         <h3>What weights are included?</h3>
@@ -556,10 +576,49 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
       </article>
       <article class="fact">
         <h3>Can Aarau be used commercially?</h3>
-        <p>Yes. Aarau is released under the <a href="license.html">SIL Open Font License 1.1</a>, which permits personal and commercial use, embedding, modification and redistribution subject to the license terms.</p>
+        <p>Yes, with a paid licence. Personal non-commercial use is free. Commercial client work, business branding, company use, web embedding, apps and software require the appropriate <a href="license.html">Aarau commercial licence</a>.</p>
       </article>
     </div>
-    <p class="details">Official source: <a href="https://github.com/Benji-Bitter/Aarau" rel="me">github.com/Benji-Bitter/Aarau</a> · Designed by Benjamin Miles · Version 0.1 development release.</p>
+    <p class="details">Official source: <a href="https://github.com/Benji-Bitter/Aarau" rel="me">github.com/Benji-Bitter/Aarau</a> · Designed by Benjamin Miles · Version 0.2 development release.</p>
+  </section>
+
+  <section id="licensing" class="reveal rule-reveal">
+    <div class="section-title">
+      <h2>Licensing.</h2>
+      <span class="section-kicker">Personal free / Commercial paid</span>
+    </div>
+    <div class="licensing-intro">
+      <h2>Use Aarau personally for free.<br>Licence it when the work makes money.</h2>
+      <p>School work, personal projects and non-commercial experimentation are free. Client work, company branding, advertising, products, business websites, apps and other commercial uses require a paid licence.</p>
+    </div>
+    <div class="license-grid">
+      <article class="license-card">
+        <span class="tier">Personal</span><div class="price">Free</div>
+        <p>One person. Non-commercial personal projects, study, testing and personal portfolio work.</p>
+        <a href="downloads/Aarau-fonts.zip" download>Download ↓</a>
+      </article>
+      <article class="license-card">
+        <span class="tier">Individual commercial</span><div class="price">A$39</div>
+        <p>One user. Client work, logos, print, social, advertising and commercial static output.</p>
+        <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Individual%20Commercial%20Licence">Get licence ↗</a>
+      </article>
+      <article class="license-card">
+        <span class="tier">Small team</span><div class="price">A$99</div>
+        <p>Up to five users inside one business or studio. Excludes webfont and app embedding.</p>
+        <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Small%20Team%20Licence">Get licence ↗</a>
+      </article>
+      <article class="license-card">
+        <span class="tier">Web</span><div class="price">A$79</div>
+        <p>One domain. Allows Aarau webfont files to be embedded and served on that licensed site.</p>
+        <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Web%20Licence">Get licence ↗</a>
+      </article>
+      <article class="license-card">
+        <span class="tier">App / Enterprise</span><div class="price">A$399+</div>
+        <p>App or software embedding from A$399. Larger teams, multiple products and enterprise use are quoted.</p>
+        <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20App%20or%20Enterprise%20Licence">Get quote ↗</a>
+      </article>
+    </div>
+    <p class="details">Commercial licences are one-time licences for the purchased scope unless otherwise agreed in writing. <a href="license.html">Read the full Aarau licence terms</a>.</p>
   </section>
 
   <section class="contact reveal rule-reveal" id="contact">
