@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Read the SIL Open Font License 1.1 for Aarau, the free open-source neo-grotesk variable typeface by Benjamin Miles.">
+<meta name="description" content="Aarau font licensing by Benjamin Miles. Free for personal use, with paid commercial licences from A$39, web licensing, app licensing and enterprise options.">
 <meta name="author" content="Benjamin Miles">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#f2f0e9">
@@ -13,12 +13,12 @@
 <link rel="manifest" href="site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aarau Typeface">
-<meta property="og:title" content="Aarau Font License — SIL Open Font License 1.1">
-<meta property="og:description" content="License terms for Aarau, the free open-source variable typeface by Benjamin Miles.">
+<meta property="og:title" content="Aarau Font Licence — Free Personal Use, Paid Commercial">
+<meta property="og:description" content="Aarau is free for personal use. Commercial licences start at A$39, with web, app and enterprise options.">
 <meta property="og:url" content="https://benji-bitter.github.io/Aarau/license.html">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary">
-<title>Aarau Font License — SIL Open Font License 1.1</title>
+<title>Aarau Font Licence — Free Personal Use, Paid Commercial</title>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -27,8 +27,8 @@
       "@type":"WebPage",
       "@id":"https://benji-bitter.github.io/Aarau/license.html#page",
       "url":"https://benji-bitter.github.io/Aarau/license.html",
-      "name":"Aarau Font License — SIL Open Font License 1.1",
-      "description":"License terms for the Aarau typeface.",
+      "name":"Aarau Font Licence — Free Personal Use, Paid Commercial",
+      "description":"Personal and commercial licensing terms for the Aarau typeface by Benjamin Miles.",
       "isPartOf":{"@id":"https://benji-bitter.github.io/Aarau/#website"},
       "about":{"@id":"https://benji-bitter.github.io/Aarau/#font"},
       "inLanguage":"en",
@@ -149,6 +149,22 @@ h1{
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:0;padding-bottom:40px}
 .skip{position:absolute;left:5vw;top:-100px;background:var(--paper);padding:10px;z-index:110}
 .skip:focus{top:10px}
+
+
+.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);margin:26px 0 42px}
+.price-row{padding:20px 26px 22px 0;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.price-row:nth-child(even){padding-left:26px;border-right:0}
+.price-row .price-name{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.price-row strong{display:block;font-size:clamp(28px,3vw,42px);font-weight:500;letter-spacing:-.035em;line-height:1;margin:15px 0 10px}
+.price-row p{font-size:14px;color:var(--muted);margin:0}
+.callout{border:1px solid var(--rule);background:var(--surface);padding:22px 24px;margin:28px 0}
+.callout strong{font-weight:600}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 8px}
+.cta-primary,.cta-secondary{display:inline-flex;align-items:center;gap:10px;padding:12px 17px;text-decoration:none;font-size:13px;border:1px solid var(--rule)}
+.cta-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cta-primary:hover{background:var(--accent);color:var(--accent-contrast);border-color:var(--accent)}
+.cta-secondary:hover{background:var(--surface);border-color:var(--ink)}
+@media(max-width:650px){.pricing-grid{grid-template-columns:1fr}.price-row,.price-row:nth-child(even){padding:18px 0;border-right:0}}
 
 /* motion */
 
@@ -286,20 +302,20 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
 <main>
   <section class="hero">
     <div class="hero-top">
-      <span class="eyebrow">Aarau / License / Version 0.1</span>
-      <span class="eyebrow">SIL OFL 1.1</span>
+      <span class="eyebrow">Aarau / Licence / Version 0.2</span>
+      <span class="eyebrow">Personal free / Commercial paid</span>
     </div>
-    <h1>A clear foundation.</h1>
+    <h1>Use it personally.<br>Licence it commercially.</h1>
     <div class="hero-bottom">
-      <p class="hero-copy">Aarau is released under the SIL Open Font License, Version 1.1 — an open license designed to let typefaces be used, shared, studied and improved while keeping the font itself open.</p>
-      <a class="download" href="LICENSE.txt" download>Download license <span class="arrow" aria-hidden="true">↓</span></a>
+      <p class="hero-copy">Aarau 0.2 and later are free for personal, non-commercial use. Commercial client work, business use, web embedding, apps and software require the appropriate paid licence.</p>
+      <a class="download" href="downloads/Aarau-fonts.zip" download>Personal use download <span class="arrow" aria-hidden="true">↓</span></a>
     </div>
   </section>
 
   <div class="license-meta reveal">
-    <div class="meta-item"><span>Typeface</span><strong>Aarau</strong></div>
+    <div class="meta-item"><span>Personal</span><strong>Free</strong></div>
+    <div class="meta-item"><span>Commercial</span><strong>From A$39</strong></div>
     <div class="meta-item"><span>Copyright</span><strong>© 2026 Benjamin Miles</strong></div>
-    <div class="meta-item"><span>License</span><strong>SIL Open Font License 1.1</strong></div>
   </div>
 
   <div class="layout">
@@ -309,18 +325,18 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
           <div class="sidebar-title">Aarau</div>
           <nav aria-label="Aarau links">
             <a href="index.html"><span>Back to specimen</span><span>↗</span></a>
-            <a href="downloads/Aarau-fonts.zip" download><span>Download font</span><span>↓</span></a>
-            <a href="mailto:benmilespersonal@gmail.com"><span>Contact Benjamin</span><span>↗</span></a>
+            <a href="downloads/Aarau-fonts.zip" download><span>Personal download</span><span>↓</span></a>
+            <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Commercial%20Licence"><span>Buy / enquire</span><span>↗</span></a>
           </nav>
         </div>
         <div class="sidebar-block">
           <div class="sidebar-title">On this page</div>
-          <nav aria-label="License sections">
-            <a href="#section-1"><span>Preamble</span><span>01</span></a>
-            <a href="#section-2"><span>Definitions</span><span>02</span></a>
-            <a href="#section-3"><span>Permission &amp; conditions</span><span>03</span></a>
-            <a href="#section-4"><span>Termination</span><span>04</span></a>
-            <a href="#section-5"><span>Disclaimer</span><span>05</span></a>
+          <nav aria-label="Licence sections">
+            <a href="#personal"><span>Personal use</span><span>01</span></a>
+            <a href="#commercial"><span>Commercial</span><span>02</span></a>
+            <a href="#rules"><span>Rules</span><span>03</span></a>
+            <a href="#legacy"><span>Legacy 0.1</span><span>04</span></a>
+            <a href="#terms"><span>Full terms</span><span>05</span></a>
           </nav>
         </div>
       </div>
@@ -328,48 +344,87 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
 
     <article class="prose reveal" id="content">
       <div class="legal-note">
-        <p>The complete license for Aarau 0.1 appears below. The downloadable <code>LICENSE.txt</code> file remains the authoritative source distributed with the font.</p>
+        <p><strong>Simple version:</strong> personal, non-commercial use is free. If Aarau is being used for a business, client, employer, monetised product, commercial website, app or other money-making purpose, you need the appropriate paid licence.</p>
       </div>
 
-      <p>Copyright (c) 2026 Benjamin Miles.</p>
-      <p>This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: <a href="https://openfontlicense.org">openfontlicense.org</a></p>
-      <p>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007</p>
+      <h2 id="personal" class="heading-reveal">PERSONAL USE</h2>
+      <p>One individual may install and use Aarau for free in personal, non-commercial work. This includes school work, private experiments, testing, non-commercial artwork and personal portfolio pieces showing your own work.</p>
+      <p>The free personal licence does not cover work for a business, employer, paying client, monetised project, advertising campaign, product for sale or any other commercial purpose.</p>
+      <div class="cta-row">
+        <a class="cta-primary" href="downloads/Aarau-fonts.zip" download>Download for personal use ↓</a>
+        <a class="cta-secondary" href="LICENSE.txt" download>Download licence text ↓</a>
+      </div>
 
-      <h2 id="section-1" class="heading-reveal">PREAMBLE</h2>
-      <p>The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.</p>
-      <p>The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.</p>
+      <h2 id="commercial" class="heading-reveal">COMMERCIAL LICENCES</h2>
+      <p>Commercial use is allowed once the correct licence has been purchased. Standard pricing is listed below in Australian dollars.</p>
 
-      <h2 id="section-2" class="heading-reveal">DEFINITIONS</h2>
-      <p>&quot;Font Software&quot; refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.</p>
-      <p>&quot;Reserved Font Name&quot; refers to any names specified as such after the copyright statement(s).</p>
-      <p>&quot;Original Version&quot; refers to the collection of Font Software components as distributed by the Copyright Holder(s).</p>
-      <p>&quot;Modified Version&quot; refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.</p>
-      <p>&quot;Author&quot; refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.</p>
+      <div class="pricing-grid">
+        <div class="price-row">
+          <span class="price-name">Individual commercial</span>
+          <strong>A$39</strong>
+          <p>One user. Client work, logos, identity, advertising, social, print, packaging, presentations and other static commercial output.</p>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Small team</span>
+          <strong>A$99</strong>
+          <p>Up to five users within one business or studio. Static commercial output. Web and app embedding are separate.</p>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Web</span>
+          <strong>A$79</strong>
+          <p>One domain. Allows Aarau webfont files to be embedded and served on that licensed website.</p>
+        </div>
+        <div class="price-row">
+          <span class="price-name">App / software</span>
+          <strong>A$399+</strong>
+          <p>One app or software product. Final pricing can vary with distribution, scale and platforms.</p>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Enterprise</span>
+          <strong>Custom</strong>
+          <p>For more than five users, multiple domains or products, OEM use, server use or larger distribution.</p>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Need something unusual?</span>
+          <strong>Ask</strong>
+          <p>Custom licensing can be arranged for uses that do not fit neatly into the standard categories.</p>
+        </div>
+      </div>
 
-      <h2 id="section-3" class="heading-reveal">PERMISSION &amp; CONDITIONS</h2>
-      <p>Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:</p>
-      <ol>
-        <li><p>Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.</p></li>
-        <li><p>Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.</p></li>
-        <li><p>No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.</p></li>
-        <li><p>The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.</p></li>
-        <li><p>The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.</p></li>
-      </ol>
+      <div class="cta-row">
+        <a class="cta-primary" href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Commercial%20Licence">Get a commercial licence ↗</a>
+        <a class="cta-secondary" href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Enterprise%20Licence">Enterprise enquiry ↗</a>
+      </div>
 
-      <h2 id="section-4" class="heading-reveal">TERMINATION</h2>
-      <p>This license becomes null and void if any of the above conditions are not met.</p>
+      <h2 id="rules" class="heading-reveal">WHAT THE LICENCE ALLOWS</h2>
+      <p>An Individual Commercial or Small Team licence lets the licensed users create final static commercial artwork using Aarau. That can include logos, brand assets, advertising, social media, packaging, print, presentations and client deliverables.</p>
+      <p>If a client needs to install or directly use the font files themselves, the client needs its own appropriate licence. Webfont embedding requires a Web Licence. App or software embedding requires an App / Software Licence.</p>
+      <p>You may convert Aarau text into outlines or static artwork for uses allowed by your licence.</p>
 
-      <h2 id="section-5" class="heading-reveal">DISCLAIMER</h2>
-      <p>THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.</p>
+      <h3>Font files may not be redistributed</h3>
+      <p>You may not sell, give away, publicly host, sublicense or redistribute the Aarau font files unless Benjamin Miles has specifically agreed to that use in writing. You also may not make Aarau available to unlicensed users or claim authorship of the typeface.</p>
 
-      <p class="footer-note">This page is a styled presentation of the license distributed with Aarau. For redistribution, use the included <strong>LICENSE.txt</strong> file.</p>
+      <h3>Private cloud and team tools</h3>
+      <p>You may upload Aarau to a private design or collaboration service only when access is limited to users covered by the licence and the service does not make the font publicly downloadable.</p>
+
+      <h2 id="legacy" class="heading-reveal">AARAU 0.1 LEGACY COPIES</h2>
+      <div class="callout">
+        <p><strong>Aarau 0.1 was previously distributed under the SIL Open Font License 1.1.</strong> Copies that were already distributed under that licence keep the rights granted by it. Those earlier rights are not revoked.</p>
+      </div>
+      <p>Aarau 0.2 and later are distributed under the Aarau Font Licence Agreement instead. This cleanly separates the earlier open-source release from the new personal-free / commercial-paid release.</p>
+
+      <h2 id="terms" class="heading-reveal">FULL TERMS</h2>
+      <p>The authoritative terms for Aarau 0.2 and later are in <a href="LICENSE.txt">LICENSE.txt</a>. The file covers definitions, ownership, personal use, commercial licence categories, client work, embedding, restrictions, modifications, termination, warranty and governing law.</p>
+      <p>Commercial licence enquiries can be sent to <a href="mailto:benmilespersonal@gmail.com">benmilespersonal@gmail.com</a>.</p>
+
+      <p class="footer-note">This licence model applies to Aarau 0.2 and later. For a large commercial agreement or unusual distribution model, get written licensing terms before use.</p>
     </article>
   </div>
 </main>
 
 <footer>
   <span>© 2026 Benjamin Miles / Aarau</span>
-  <span><a href="index.html">Specimen</a> &nbsp; <a href="downloads/Aarau-fonts.zip" download>Download font</a></span>
+  <span><a href="index.html">Specimen</a> &nbsp; <a href="downloads/Aarau-fonts.zip" download>Personal download</a> &nbsp; <a href="mailto:benmilespersonal@gmail.com?subject=Aarau%20Commercial%20Licence">Commercial licence</a></span>
 </footer>
 </div>
 
