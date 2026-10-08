@@ -3,9 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Aarau. An original neo-grotesk typeface by Benjamin Miles. Nine weights, one variable font. Download the development release.">
+<meta name="description" content="Download Aarau, a free open-source neo-grotesk variable font by Benjamin Miles. Nine weights from Thin to Black, with TTF, OTF and WOFF2 files under the SIL Open Font License.">
+<meta name="author" content="Benjamin Miles">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#f2f0e9">
-<title>Aarau — Clear by design</title>
+<link rel="canonical" href="https://benji-bitter.github.io/Aarau/">
+<link rel="sitemap" type="application/xml" href="https://benji-bitter.github.io/Aarau/sitemap.xml">
+<link rel="alternate" type="text/plain" href="https://benji-bitter.github.io/Aarau/llms.txt" title="Aarau AI-readable summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aarau Typeface">
+<meta property="og:title" content="Aarau Typeface — Free Neo-Grotesk Variable Font">
+<meta property="og:description" content="A free open-source neo-grotesk typeface by Benjamin Miles. Nine weights, variable 100–900, TTF, OTF and WOFF2.">
+<meta property="og:url" content="https://benji-bitter.github.io/Aarau/">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aarau Typeface — Free Neo-Grotesk Variable Font">
+<meta name="twitter:description" content="Free open-source variable sans serif by Benjamin Miles. Nine weights, TTF, OTF and WOFF2.">
+<title>Aarau Typeface — Free Neo-Grotesk Variable Font by Benjamin Miles</title>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://benji-bitter.github.io/Aarau/#website",
+      "url":"https://benji-bitter.github.io/Aarau/",
+      "name":"Aarau Typeface",
+      "alternateName":["Aarau Font","Aarau"],
+      "description":"Official website for Aarau, a free open-source neo-grotesk variable typeface by Benjamin Miles.",
+      "inLanguage":"en",
+      "publisher":{"@id":"https://benji-bitter.github.io/Aarau/#creator"}
+    },
+    {
+      "@type":"Person",
+      "@id":"https://benji-bitter.github.io/Aarau/#creator",
+      "name":"Benjamin Miles",
+      "url":"https://github.com/Benji-Bitter",
+      "sameAs":["https://github.com/Benji-Bitter"]
+    },
+    {
+      "@type":"CreativeWork",
+      "@id":"https://benji-bitter.github.io/Aarau/#font",
+      "name":"Aarau",
+      "alternateName":"Aarau Typeface",
+      "url":"https://benji-bitter.github.io/Aarau/",
+      "description":"A free open-source neo-grotesk variable sans serif typeface with nine weights from 100 to 900.",
+      "creator":{"@id":"https://benji-bitter.github.io/Aarau/#creator"},
+      "copyrightHolder":{"@id":"https://benji-bitter.github.io/Aarau/#creator"},
+      "copyrightYear":2026,
+      "datePublished":"2026-10-07",
+      "dateModified":"2026-10-08",
+      "version":"0.1",
+      "license":"https://openfontlicense.org/",
+      "isAccessibleForFree":true,
+      "keywords":["Aarau typeface","Aarau font","free font","open source font","neo-grotesk font","variable font","sans serif","TTF","OTF","WOFF2"],
+      "encoding":{
+        "@type":"MediaObject",
+        "contentUrl":"https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip",
+        "downloadUrl":"https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip",
+        "contentSize":"2938777",
+        "encodingFormat":"application/zip"
+      },
+      "mainEntityOfPage":{"@id":"https://benji-bitter.github.io/Aarau/#website"}
+    }
+  ]
+}
+</script>
 <style>
 @font-face{font-family:Aarau;src:url('assets/Aarau-Variable.woff2?v=c44777a71e85') format('woff2');font-weight:100 900;font-display:swap}
 :root{
@@ -181,6 +247,20 @@ textarea:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
 footer{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:0;padding-bottom:40px}
 .skip{position:absolute;top:-100px}
 .skip:focus{top:0;background:var(--paper);padding:10px;z-index:110}
+
+.facts-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--rule)}
+.fact{padding:25px 38px 27px 0;border-bottom:1px solid var(--rule)}
+.fact:nth-child(odd){border-right:1px solid var(--rule)}
+.fact:nth-child(even){padding-left:38px}
+.fact h3{font-size:clamp(22px,2.5vw,34px);line-height:1.08;letter-spacing:-.03em;font-weight:500;margin:0 0 14px}
+.fact p{color:var(--muted);margin:0;max-width:620px}
+.fact a{text-decoration-color:var(--rule)}
+.fact a:hover{text-decoration-color:currentColor}
+@media(max-width:650px){
+  .facts-grid{grid-template-columns:1fr}
+  .fact,.fact:nth-child(even){padding:20px 0;border-right:0}
+  .fact:nth-child(odd){border-right:0}
+}
 
 /* Motion */
 
@@ -456,6 +536,32 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
     </div>
   </section>
 
+  <section id="about" class="reveal rule-reveal">
+    <div class="section-title">
+      <h2>About Aarau.</h2>
+      <span class="section-kicker">Quick facts</span>
+    </div>
+    <div class="facts-grid">
+      <article class="fact">
+        <h3>What is Aarau?</h3>
+        <p>Aarau is a free, open-source neo-grotesk variable sans serif typeface designed by Benjamin Miles. It is built for brand identities, interfaces, editorial layouts and everyday communication.</p>
+      </article>
+      <article class="fact">
+        <h3>What weights are included?</h3>
+        <p>The family contains nine static weights from Thin 100 through Black 900, plus a continuous variable font covering the full 100–900 weight axis.</p>
+      </article>
+      <article class="fact">
+        <h3>Which font formats are available?</h3>
+        <p>The Aarau download includes desktop TTF and OTF fonts, webfont files including WOFF2, and a variable font for modern design and web workflows.</p>
+      </article>
+      <article class="fact">
+        <h3>Can Aarau be used commercially?</h3>
+        <p>Yes. Aarau is released under the <a href="license.html">SIL Open Font License 1.1</a>, which permits personal and commercial use, embedding, modification and redistribution subject to the license terms.</p>
+      </article>
+    </div>
+    <p class="details">Official source: <a href="https://github.com/Benji-Bitter/Aarau" rel="me">github.com/Benji-Bitter/Aarau</a> · Designed by Benjamin Miles · Version 0.1 development release.</p>
+  </section>
+
   <section class="contact reveal rule-reveal" id="contact">
     <h2>Let’s talk type.</h2>
     <div>
@@ -468,7 +574,7 @@ button,a,input,textarea{-webkit-tap-highlight-color:transparent}
 
 <footer>
   <span>© 2026 Benjamin Miles / Aarau</span>
-  <span><a href="license.html">License</a> &nbsp; <a href="downloads/Aarau-fonts.zip" download>Download font</a></span>
+  <span><a href="license.html">License</a> &nbsp; <a href="downloads/Aarau-fonts.zip" download>Download font</a> &nbsp; <a href="https://github.com/Benji-Bitter/Aarau" rel="me">GitHub ↗</a></span>
 </footer>
 </div>
 
