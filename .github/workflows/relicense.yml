@@ -1,10 +1,7 @@
 name: Relicense Aarau package
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/relicense.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
