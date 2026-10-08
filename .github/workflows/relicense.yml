@@ -1,0 +1,123 @@
+name: Relicense Aarau package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/relicense.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  relicense:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install font tools
+        run: python -m pip install --upgrade fonttools brotli
+
+      - name: Patch font metadata and downloadable package
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from fontTools.ttLib import TTFont
+          import tempfile, zipfile, shutil, os
+
+          ROOT = Path(".")
+          LICENSE = (ROOT / "LICENSE.txt").read_text(encoding="utf-8")
+          LICENSE_URL = "https://benji-bitter.github.io/Aarau/license.html"
+          LICENSE_SUMMARY = (
+              "Aarau 0.2 and later: free for personal, non-commercial use only. "
+              "Commercial use requires a paid licence from Benjamin Miles. "
+              "See https://benji-bitter.github.io/Aarau/license.html. "
+              "Legacy Aarau 0.1 copies previously distributed under SIL OFL 1.1 "
+              "remain under those earlier terms."
+          )
+
+          def set_name_all(name, name_id, value):
+              records = [
+                  (3, 1, 0x0409),
+                  (1, 0, 0),
+              ]
+              for platform_id, encoding_id, language_id in records:
+                  try:
+                      name.setName(value, name_id, platform_id, encoding_id, language_id)
+                  except Exception as exc:
+                      print("name record warning", name_id, exc)
+
+          def patch_font(path: Path):
+              try:
+                  font = TTFont(path)
+                  if "name" in font:
+                      name = font["name"]
+                      set_name_all(name, 13, LICENSE_SUMMARY)
+                      set_name_all(name, 14, LICENSE_URL)
+                      set_name_all(name, 5, "Version 0.200")
+                  if "head" in font:
+                      font["head"].fontRevision = 0.2
+                  font.save(path)
+                  print("patched", path)
+                  return True
+              except Exception as exc:
+                  print("FAILED", path, exc)
+                  return False
+
+          site_font = ROOT / "assets" / "Aarau-Variable.woff2"
+          if site_font.exists():
+              patch_font(site_font)
+
+          zip_path = ROOT / "downloads" / "Aarau-fonts.zip"
+          if not zip_path.exists():
+              raise SystemExit("downloads/Aarau-fonts.zip not found")
+
+          with tempfile.TemporaryDirectory() as td:
+              work = Path(td) / "package"
+              work.mkdir()
+              with zipfile.ZipFile(zip_path, "r") as z:
+                  z.extractall(work)
+
+              for p in list(work.rglob("*")):
+                  if p.is_file():
+                      n = p.name.lower()
+                      if n in {"license.txt", "ofl.txt", "sil open font license.txt"} or n.startswith("ofl-"):
+                          p.unlink()
+
+              (work / "LICENSE.txt").write_text(LICENSE, encoding="utf-8")
+
+              exts = {".ttf", ".otf", ".woff", ".woff2"}
+              patched = 0
+              for p in work.rglob("*"):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      patched += int(patch_font(p))
+
+              if patched == 0:
+                  raise SystemExit("No font files were patched in the ZIP")
+
+              tmp_zip = zip_path.with_suffix(".zip.tmp")
+              with zipfile.ZipFile(tmp_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+                  for p in sorted(work.rglob("*")):
+                      if p.is_file():
+                          z.write(p, p.relative_to(work).as_posix())
+              os.replace(tmp_zip, zip_path)
+
+          print("Relicensed font package written")
+          PY
+
+      - name: Commit updated font files
+        run: |
+          git config user.name "Aarau Release Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/Aarau-Variable.woff2 downloads/Aarau-fonts.zip
+          if git diff --cached --quiet; then
+            echo "No binary changes to commit"
+          else
+            git commit -m "Relicense Aarau 0.2 font package"
+            git push
+          fi
