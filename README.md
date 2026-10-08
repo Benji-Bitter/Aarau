@@ -1,19 +1,59 @@
-# Aarau website
+# Aarau Typeface
 
-A standalone static website. No npm, build step, backend or secrets needed.
+**Aarau** is a free, open-source neo-grotesk variable sans serif typeface by **Benjamin Miles**.
+
+Official specimen and download: https://benji-bitter.github.io/Aarau/
+
+## About Aarau
+
+Aarau is designed for brand identities, interfaces, editorial layouts and everyday communication. The family includes nine static weights from **Thin 100** to **Black 900**, plus a continuous variable font covering the full **100–900** weight axis.
+
+Distributed formats include:
+
+- TTF
+- OTF
+- WOFF2 / webfonts
+- Variable font
+
+Aarau is released under the **SIL Open Font License 1.1**.
+
+- Specimen: https://benji-bitter.github.io/Aarau/
+- License: https://benji-bitter.github.io/Aarau/license.html
+- Download: https://benji-bitter.github.io/Aarau/downloads/Aarau-fonts.zip
+- AI-readable summary: https://benji-bitter.github.io/Aarau/llms.txt
+
+> “Aarau” in this repository refers to the Aarau typeface by Benjamin Miles, not the city of Aarau in Switzerland.
+
+## Website
+
+The site is a standalone static GitHub Pages website. No npm, build step, backend or secrets are required.
+
+Search/discovery files include:
+
+- `robots.txt`
+- `sitemap.xml`
+- `llms.txt`
+- `site.webmanifest`
+- `favicon.svg`
+- JSON-LD structured data on the main pages
 
 ## Deploy on GitHub Pages
 
-1. Create a GitHub repository for your site.
-2. Copy **the contents of this folder** into the repository root, including `assets/`, `downloads/`, `LICENSE.txt` and `.nojekyll`. `index.html` must be at the root.
-3. Commit and push to your default branch (usually `main`).
-4. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select your default branch and **/ (root)**, then Save.
-5. GitHub will display your live URL after deployment. Paths are relative, so both `username.github.io` and `username.github.io/repository/` work.
+1. Keep `index.html` at the repository root.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select `main` and `/ (root)`.
+5. Save.
 
-Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Official GitHub Pages instructions:
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
-The download ZIP contains the nine Roman weights and variable fonts. Contact links use the supplied email and Australian phone number. No form service or tracking is included.
+## Editing
 
-## Edit
+- `index.html` contains the main specimen, story, type tester and Aarau information.
+- `license.html` contains the styled SIL Open Font License page.
+- `LICENSE.txt` is the authoritative distributed license.
+- `assets/Aarau-Variable.woff2` is the website font asset.
+- `downloads/Aarau-fonts.zip` contains the downloadable font package.
 
-Edit `index.html` for layout, text and contact details. `license.html` displays the supplied licence; retain `LICENSE.txt` with distributed fonts. Keep font URLs relative. The complete font project refreshes the font assets and download ZIP with `.venv/bin/python scripts/website.py` after rebuilding the fonts. The HTML pages remain authoritative and are preserved by that command.
+Keep font URLs relative so the site works correctly when hosted as a GitHub Pages project site.
